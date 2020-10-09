@@ -1,0 +1,153 @@
+SIMPLE  =                    T / Standard FITS format                           BITPIX  =                    8 / Character data                                 NAXIS   =                    1 / Text string                                    NAXIS1  =                 6481 / Number of characters                           VOTMETA =                    T / Table metadata in VOTable format               EXTEND  =                    T / There are standard extensions                  COMMENT                                                                         COMMENT The data in this primary HDU consists of bytes which                    COMMENT comprise a VOTABLE document.                                            COMMENT The VOTable describes the metadata of the table contained               COMMENT in the following BINTABLE extension.                                    COMMENT Such a BINTABLE extension can be used on its own as a perfectly         COMMENT good table, but the information from this HDU may provide some          COMMENT useful additional metadata.                                             COMMENT There is one following BINTABLE.                                        NTABLE  =                    1 / Number of following BINTABLE HDUs              END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <?xml version='1.0' encoding='UTF-8'?>
+<VOTABLE version='1.1'>
+<!--
+ !  VOTable written by uk.ac.starlink.votable.FitsPlusTableWriter
+ !  Describes BINTABLE extensions in following HDUs
+ !-->
+<RESOURCE>
+<TABLE name="Joined" nrows="115">
+<PARAM arraysize="35" datatype="char" name="Match type" value="Pair match, best matched pairs only">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="11" datatype="char" name="Match algorithm" value="Exact Value">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="71" datatype="char" name="Join Type" value="All from 1 (An output row for each matched or unmatched row in table 1)">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="29" datatype="char" name="First input table" value="5: 2010_xmm53fields_table.dat"/>
+<PARAM arraysize="18" datatype="char" name="Second input table" value="18: XMM_stars_TMGH"/>
+<PARAM arraysize="35" datatype="char" name="Match type" value="Pair match, best matched pairs only">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="11" datatype="char" name="Match algorithm" value="Exact Value">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="71" datatype="char" name="Join Type" value="All from 1 (An output row for each matched or unmatched row in table 1)">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="15" datatype="char" name="First input table" value="23: match(5,18)"/>
+<PARAM arraysize="30" datatype="char" name="Second input table" value="15: correct_XMM_TMGH_AUG29.out"/>
+<PARAM arraysize="35" datatype="char" name="Match type" value="Pair match, best matched pairs only">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="11" datatype="char" name="Match algorithm" value="Exact Value">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="69" datatype="char" name="Join Type" value="1 and 2 (An output row for each row represented in both input tables)">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="22" datatype="char" name="First input table" value="5: 2009_Cappelluti.fit"/>
+<PARAM arraysize="9" datatype="char" name="Second input table" value="2: COSMOS"/>
+<PARAM arraysize="6" datatype="char" name="EXTNAME" value="Joined">
+<DESCRIPTION>table name</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="19" datatype="char" name="DATE-HDU" value="2012-10-18T11:25:36">
+<DESCRIPTION>Date of HDU creation (UTC)</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="5" datatype="char" name="STILVERS" value="3.0-3">
+<DESCRIPTION>Version of STIL software</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="42" datatype="char" name="STILCLAS" value="uk.ac.starlink.votable.FitsPlusTableWriter">
+<DESCRIPTION>Author class in STIL so</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="81" datatype="char" name="COMMENT" value=" *** End of mandatory fields ***   *** Column names ***   *** Column formats *** ">
+<DESCRIPTION>FITS COMMENT card values</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="33" datatype="char" name="Match type" value="Pair match; Best match, symmetric">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="11" datatype="char" name="Match algorithm" value="Exact Value">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="71" datatype="char" name="Join Type" value="All from 1 (An output row for each matched or unmatched row in table 1)">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="34" datatype="char" name="First input table" value="20: XEGS_for_Sotiria_2012SEP29.out"/>
+<PARAM arraysize="28" datatype="char" name="Second input table" value="25: xray_rainmultimatch.fits"/>
+<PARAM arraysize="33" datatype="char" name="Match type" value="Pair match; Best match, symmetric">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="11" datatype="char" name="Match algorithm" value="Exact Value">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="71" datatype="char" name="Join Type" value="All from 1 (An output row for each matched or unmatched row in table 1)">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="12" datatype="char" name="First input table" value="2: temp.fits"/>
+<PARAM arraysize="12" datatype="char" name="Second input table" value="6: Copy of 4"/>
+<PARAM arraysize="33" datatype="char" name="Match type" value="Pair match; Best match, symmetric">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="11" datatype="char" name="Match algorithm" value="Exact Value">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="82" datatype="char" name="Join Type" value="1 and 2 (An output row for each row represented in both input tables (INNER JOIN))">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="46" datatype="char" name="First input table" value="1: not_Chandra_area_master_catalog.COSMOS.fits"/>
+<PARAM arraysize="20" datatype="char" name="Second input table" value="3: COSMOS_input.fits"/>
+<FIELD datatype="int" name="ID_XMM_COSMOS">
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="int" name="Counts_XMM_COSMOS" unit="ct">
+<DESCRIPTION>(toInteger($17))</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="int" name="e_Counts_XMM_COSMOS" unit="ct">
+<DESCRIPTION>(toInteger(e_Rate*ExpTime))</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="double" name="Flux_XMM_COSMOS" unit="erg/s/cm2">
+<DESCRIPTION>($10*1.441)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_Flux_XMM_COSMOS">
+<DESCRIPTION>($11*1.441)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="redshift_XMM_COSMOS">
+<DESCRIPTION>(toDouble($6)) (redshift_flag_COSMOS&lt;0? 1: $6)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="int" name="redshift_flag_XMM_COSMOS">
+<DESCRIPTION>(toInteger(1))</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="float" name="mag_XMM_COSMOS"/>
+<!-- Dummy VOTable - no DATA element -->
+</TABLE>
+</RESOURCE>
+</VOTABLE>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               XTENSION= 'BINTABLE'           / binary table extension                         BITPIX  =                    8 / 8-bit bytes                                    NAXIS   =                    2 / 2-dimensional table                            NAXIS1  =                   44 / width of table in bytes                        NAXIS2  =                  115 / number of rows in table                        PCOUNT  =                    0 / size of special data area                      GCOUNT  =                    1 / one data group                                 TFIELDS =                    8 / number of columns                              EXTNAME = 'Joined  '           / table name                                     TTYPE1  = 'ID_XMM_COSMOS'      / label for column 1                             TFORM1  = 'J       '           / format for column 1                            TNULL1  =          -2147483648 / blank value for column 1                       TTYPE2  = 'Counts_XMM_COSMOS'  / label for column 2                             TFORM2  = 'J       '           / format for column 2                            TUNIT2  = 'ct      '           / units for column 2                             TNULL2  =          -2147483648 / blank value for column 2                       TCOMM2  = '(toInteger($17))'                                                    TTYPE3  = 'e_Counts_XMM_COSMOS' / label for column 3                            TFORM3  = 'J       '           / format for column 3                            TUNIT3  = 'ct      '           / units for column 3                             TNULL3  =          -2147483648 / blank value for column 3                       TCOMM3  = '(toInteger(e_Rate*ExpTime))'                                         TTYPE4  = 'Flux_XMM_COSMOS'    / label for column 4                             TFORM4  = 'D       '           / format for column 4                            TUNIT4  = 'erg/s/cm2'          / units for column 4                             TCOMM4  = '($10*1.441)'                                                         TTYPE5  = 'e_Flux_XMM_COSMOS'  / label for column 5                             TFORM5  = 'D       '           / format for column 5                            TCOMM5  = '($11*1.441)'                                                         TTYPE6  = 'redshift_XMM_COSMOS' / label for column 6                            TFORM6  = 'D       '           / format for column 6                            TCOMM6  = '(toDouble($6)) (redshift_flag_COSMOS<0? 1: $6)'                      TTYPE7  = 'redshift_flag_XMM_COSMOS' / label for column 7                       TFORM7  = 'J       '           / format for column 7                            TNULL7  =          -2147483648 / blank value for column 7                       TCOMM7  = '(toInteger(1))'                                                      TTYPE8  = 'mag_XMM_COSMOS'     / label for column 8                             TFORM8  = 'E       '           / format for column 8                            DATE-HDU= '2015-08-07T11:31:36' / Date of HDU creation (UTC)                    STILVERS= '3.0-11  '           / Version of STIL software                       STILCLAS= 'uk.ac.starlink.votable.FitsPlusTableWriter' / Author class in STIL soEND                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Ñ   
+   =8ðM€   =óq3334?ð      ÿÿÿA¥p¤  Ó   
+   =åL€   <ä·pfffg?ð      ÿÿÿAÃ¸     2   =<mÑ8ÈÃy<÷k1ö–?à›¥à      A¢ÌÍ      2   =¾@è6†[<åžéÇ%?Ë¥ã`      Aœ=q   '   O   =]lþ<â¯£hAý?ë;d`      A¨     5   /   =%ÂhIv‚<ë‡€^°¿?÷X`      A¨áH   9   }   = ñÝý^7d<ð©ÏCc…ô?÷/       A£G®   X   ˆ   =áä4J›<îŸÝÆ½“Ô@;d`      A¶{   b   I   =†sMþÖ<èQÆÀU8¬?ñ²-       A¥Â   d   Q   =ì´Á<ä·pcqº?ÑG®       A£®   s   Y   =êE)½¬ÿ<êñÍ °?ò“tÀ      Až     ¿   G   =Wîžá„<é8\Fª£®?Ö$Ý       A¢zá   Ï   [   =
+€(-H<çk1ö–?êE¡À      A¤zá   Ý   >   =
+’<*Ä1<èQÆÀU8¬?òMÓ       A®{   ê   2   ==Uýœ¾<ä·pcqº?ä›¥à      A±33     &   =Ò²	†Ã<âêE)½¬ÿ?ý²-       A­p¤  •     =,Š£é“pÙ<ëì´Á?ÖÈ´@      Až(ö  Ý   }   =ï·~É"<í¹H@h(Ò?óïÀ      A«G®  à   Ê   =*¯@õq‘<ôD%‰Âi	?Özà      A™×
+  ä   @   =%ÂhIv‚<çk1ö–?ø“€      A—×
+  ì   ƒ   =%d`ˆ1ÊR<ó]lþ?ùxÕ       A½Â  ô   7   =Åƒî-<ô·pcqº?ïn       A¬\  ø   U   =„›†¡+›<ìÒ²	†Ã?à¬@      A­®  û   r   =1‹«a;Ü<èQÆÀU8¬?å`A€      A°\  þ   :   =*»&œo‘<ñŽ;u?üÌÌÀ      A£…     `   =5G×gò=PÃvv?ð~ùà      A»®     ;   =„›†¡+›<âêE)½¬ÿ?ì1       A£ë…     @   =Åƒî-<âêE)½¬ÿ?ùt¼`      A®áH    3   =&÷æIËá<ëì´Á?ç…À      A®=q      2   
+=%ÂhIv‚<çk1ö–?õ
+=€      A§G®  !   9   
+=ô~«Èº<ð6„€8Ðs?ùV       A®áH  -   2   	=ù¾=´W<é8\Fª£®@IÀ      A›33  0   >   =ì´Á<çk1ö–@•       A¶    3   ]   =vúf’÷~<é8\Fª£®?ò“tÀ      A²    9   7   =	8\Fª£®<Û‡€^°¿?ø$Ý       A§G®  E   ;   =&çkj==Uýœ¾?òõÂ€      A¦áH  P   H   =QÆÀU8¬<òvúf’÷~?öÝ/       A§×
+  Z   r   =À®¨Y—<ãÐÚÆ—³ˆ?øÐå`      A¥33  j   Ì   ='ˆ½ÁCý<ò¯£hAý?ý…À      A¹®     W   =™+t,<æ„›†¡+›?ô9X       A®    ‚   3   =d`ˆ1ÊR<ä·pcqº?øE¡À      A¥×
+  ˜   ;   =,“’ÞS<ëì´Á?ý¶E       A¦Qì  £   B   =dÉ¸ðö<ìÒ²	†Ã?ó÷Îà      A±…  ©   L   =,“’ÞS<åžéÇ%?ò¼j€      A¯ë…  	   3   =LÍë}¤<â¯£hAý?õÂ`      A¢{  	7   .   =G×gò<é8\Fª£®?ö~ùà      A¸ff  	ð   A   =ñÅÑ<ò¯£hAý?ên—€      A³Â  
+
+   `   =PÃvv<ë‡€^°¿?×Oà      A¡\)  
+O   5   =,“’ÞS<ð6„€8Ðs?î—@      AÂQì  –   å   =3í­wb`è<ù8\Fª£®?ËC•€      Ašff  ¬   8   =‹l!ê“m<åžéÇ%?æ‡+       A·…  Ù   j   =!ûqSšF<ôD%‰Âi	?èƒ`      AœÌÍ  Ú   x   =êE)½¬ÿ<ä·pcqº?þ5?€      Ašzá  Û   0   
+=þ¶åHî<çk1ö–?à         A£ë…  í   3   =	åLkj³ð<é8\Fª£®?Û"Ðà      A«¸  ú   ˜   =%ô~«Èº<ñdÉ¸ðö?Ë"Ðà      A›33     G   =V¿h#–5<é8\Fª£®?É‡       Aœ£×     3   =xÒC‰f@<ëì´Á?úÝ/       A·
+=     f   =ÏJUéna<ï†sMþÖ?åV       Aš       -   	=2¯£hAý=,“’ÞS?à“tÀ      A–    !   ;   =EýP4<D<é8\Fª£®?é/       A·\)  +   B   =}ËÜ_P<ð6„€8Ðs?öƒ`      Aœ(ö  7   @   =
+ËâÉUÿ<åžéÇ%@	$Ý       A´Qì  D   a   =(þ¶åHî<ù«§	ÕY/?èƒ`      A¦õÃ  I   "   	=1‹«a;Ü<é8\Fª£®?ï\)       Aº=q  \   J   =ù¾=´W<åžéÇ%?öŸ¾€      A¯™š  n  °   =;¼
+ÊrÍ<÷Þ{Ð!L?õn       Ašff     Ã   =.VãÞ>¼<ö„›†¡+›?Øb@      AŸ…  ›   €   =?,áô€<èQÆÀU8¬?ör°       A›×
+  È   k   =!^¿Ýì<êñÍ °?ÕÂ`      A¥ë…  Ë  #   =3dÄ¤][œ<õ*»&œo‘?ø$Ý       A¤=q  ú   =   ="ÍrxòÿŸ<ü_gÉÞÑB?âŸ¾€      A¬=q     ,   
+=zb´7«g<òêE)½¬ÿ@Æ§à      A£p¤     0   
+=÷æIËá<ôD%‰Âi	?÷Oà      A±\)  5   .   
+=D%‰Âi	<ãÐÚÆ—³ˆ?Ö$Ý       A©×
+  ;   ,   =òí¡ýƒ“<ï†sMþÖ?´9X       AõÃ  C   N   =!» ém<øÅƒî-?Ò-`      A§
+=  x   S   =Üë_s÷<òvúf’÷~?æ5?€      A°£×  |  e   =Ríß…x)=ÍrxòÿŸ?×KÆ       A¢=q  ¨   %   	<ö÷æIËá<Ù8\Fª£®?þ9XbMÓ   A¡®  ñ   +   
+=%æºFr
+=×«aáZ?º^5@      A’áH  ô   b   =".ë¬˜F<óÐÚÆ—³ˆ?ñn       A—Â  û   5   =À®¨Y—<ìÒ²	†Ã?õdZ       A£…  *‰   ,   =d`ˆ1ÊR<Û‡€^°¿?ÿ\)       A’=q  Óº   +   	=D%‰Âi	<ñdÉ¸ðö@ Ðå`      A¦£×   ›   <   =òí¡ýƒ“<é8\Fª£®?ñuŽ       AºQì   Ì   A   =ù¾=´W<ëì´Á?òé       A·33     1   =Ùƒ(Rî•<îŸÝÆ½“Ô@þ(       Aªff  §   <   =QÆÀU8¬<åžéÇ%?ëqu€      A¿\)  ˆ   *   =Åƒî-<îŸÝÆ½“Ô@¥®à      A¾õÃ  
+Z   V   =²w¥Á<âêE)½¬ÿ@g¡       AºõÃ  ©   C   
+=xÒC‰f@<ñdÉ¸ðö?åsêÀ      A±®  Â   2   =	«§	ÕY/<çk1ö–?Ûeý€      A¯Â  î      =N^\+é=<øQÆÀU8¬?ð/       A³…  B   .   	=°ŸÈ(R?<ð6„€8Ðs@2a€      AÌff  f   ‘   ="ÛÛÑXVO<ï†sMþÖ?ÕF
+       A£®  ­   '   	=vúf’÷~<âêE)½¬ÿ@0‰       Aº    À   u   
+=¨>Òµ@Í<â¯£hAý?ÛMj       A¤¸R  É   ‚   =6¡n7kØû=
+€(-H?ôE¡À      A·…  í   *   	=D%‰Âi	<â¯£hAý@ƒFà      AÊ    û   }   =(n™qæ<÷k1ö–?ðw1€      ÂÆ          =!Ê
+AÒç=<ï†sMþÖ?åF
+       A´¸R  H   $   = DíØž'#<ý¹H@h(Ò@ Î`      AÁ…  t   ?   =G×gò<ï†sMþÖ@       A¡¸  ‡   C   =¤Ön‹ñ]<âêE)½¬ÿ?ð_       AÁ\)     :   =]lþ<áŽ;u@ ATÀ      AÂ{  ¬   L   =©ÏCc…ô<é8\Fª£®?ñZî`      AÀ£×  Å   9   =±¸é‡Œ<êñÍ °?úƒ`      AÄ    Õ   O   =ÐÚÆ—³ˆ<ëì´Á?¥       A¶Qì  zQ      =ÐÚÆ—³ˆ<í¹H@h(Ò?ýP±       AÅ®  ÔÔ   (   
+=vúf’÷~<ãÐÚÆ—³ˆ?ÓåÉ       A§
+=  êç   %   =Ò²	†Ã<êñÍ °?î©“       A°=q  ëe   $   =‡€^°¿<é8\Fª£®?ý¶®€      AÒ=q  ë°   1   =xÒC‰f@<üÒ²	†Ã?êêJ€      A¹®  ëÖ       =ï·~É"<ÿ(‰èIU?ØÀ      A«\)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

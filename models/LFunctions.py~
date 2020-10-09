@@ -1,0 +1,161 @@
+from numpy import where, power, log10, exp,  array
+class Models:
+    """All luminosities are inserted as logarithms"""
+    """Includes models with luminosity and density evolution"""
+    
+    def __init__(self):
+        pass
+
+    def Phi0(self,Lx,z,L0,g1,g2, scale=1.):
+        """Luminosity function at z=0: broken power law"""
+        return  1./((((power(10.,Lx))/(scale*(power(10.,L0))))**g1)+(((power(10.,Lx))/(scale*(power(10.,L0))))**g2))
+
+#   Pure luminosity evolution - Ueda 2003
+    def PLE(self,Lx,z,L0,g1,g2,p1,p2,zc):
+        eL = where(z <= zc, power((1.+z), p1), (power((1.+zc), p1))*(power((1.+z)/(1.0+zc), p2)))
+        
+        Phi = self.Phi0(Lx, z, L0, g1, g2, eL)
+        return Phi
+
+#   Pure luminosity evolution - Silverman 2008
+    def PLE2(self,Lx,z,L0,g1,g2,p1,p2,zc):
+        xi = log10((1.0+z)/(1.0+zc))
+        L0 = L0 + p1*xi + p2*power(xi,2.0)
+        eL = 1.0
+        Phi = self.Phi0(Lx, z, L0, g1, g2, eL)
+
+        return Phi#   Pure luminosity evolution
+    
+#   Pure luminosity evolution - Aird 2010
+    def PLE3(self,Lx,z,L0,g1,g2,p1,p2,zc):
+        xi = (1.0+zc)/(1.0+z)
+        L0 = L0 - log10(power(xi,p1)+power(xi,p2))
+        eL = 1.0
+       # print L0
+        Phi = self.Phi0(Lx, z, L0, g1, g2, eL)
+        return Phi#   Pure luminosity evolution
+
+#   Pure luminosity evolution - Fotopoulou 2012
+    def PLE4(self,Lx,z,L0,g1,g2,p1,p2,zc,La,a):
+        Lx10 = power(10.0, Lx)
+        La10 = power(10.0, La)
+        
+        zc_case1 = zc
+        zc_case2 = zc*power( Lx10/La10, a )
+        zcrit = where(Lx >= La, zc_case1, zc_case2)
+
+        xi = (1.0+zcrit)/(1.0+z)
+        L0 = L0 - log10(power(xi,p1)+power(xi,p2))
+        eL = 1.0
+       # print L0
+        Phi = self.Phi0(Lx, z, L0, g1, g2, eL)
+        return Phi#   Pure luminosity evolution
+    
+    
+#   modified Pure luminosity evolution - Silverman 2008
+    def mod_PLE(self,Lx,z,L0,g1,g2,p1,p2,zc,a):
+        xi = log10((1.0+z)/(1.0+zc))
+        L0 = L0 + p1*xi + p2*power(xi,2.0)
+        eL = 1.0
+        g2 = g2*power((1.0+z)/(1.0+zc),a)        
+        Phi = self.Phi0(Lx, z, L0, g1, g2, eL)
+        return Phi
+    
+#   Pure density evolution - Ueda 2003
+    def PDE(self,Lx,z,L0,g1,g2,p1,p2,zc):
+        eD = where(z <= zc, power((1.+z),p1), (power((1.+zc), p1))*(power((1.+z)/(1.0+zc), p2)))
+        
+        Phi = self.Phi0(Lx, z, L0, g1, g2)
+        return Phi*eD
+    
+# Luminosity Dependent Density Evolution        
+#   Miyaji et al. 2000
+    def Miyaji(self,Lx,z,L0,g1,g2,p1,p2,zc,La,a,pmin):
+        if (z <= zc) and (Lx < La):
+            e = (1.+z)**(max(pmin,p1-a*(La-Lx)))
+        elif (z <= zc) and (Lx >= La):
+            e = (1.+z)**p1
+        elif (z > zc) and (Lx < La):
+            e = ((1.+zc)**(max(pmin,p1-a*(La-Lx))))*((1.+z)/(1.+zc))**p2
+        elif (z > zc) and (Lx >= La):
+            e = ((1.+zc)**(p1))*((1.+z)/(1.+zc))**p2
+        
+        Phi = self.Phi0(Lx, z, L0, g1, g2)
+        return Phi*e
+
+#   Ueda et al. 2003
+    def Ueda(self,Lx,z,L0,g1,g2,p1,p2,zc,La,a):
+        
+        Lx10 = power(10.0, Lx)
+        La10 = power(10.0, La)
+        L010 = power(10.0, L0)
+        
+        zc_case1 = zc
+        zc_case2 = zc*power( Lx10/La10, a )
+        zcrit = where(Lx >= La, zc_case1, zc_case2)
+        
+        ec_case1 = power( (1.+z), p1 )
+        ec_case2 = power( (1.+zcrit), p1)*power( (1.+z)/(1.+zcrit), p2)
+        ec = where(z <= zcrit, ec_case1, ec_case2)
+        
+        Phi = self.Phi0(Lx, z, L0, g1, g2)
+        return Phi * ec
+
+#   Hasinger et al. 2005
+    def Hasinger(self,Lx,z,L0,g1,g2,p1,p2,zc,La,a,b1,b2):
+        p1L = p1 + b1*(Lx-44.)
+        p2L = p2 + b2*(Lx-44.)
+        
+        Lx10 = power(10.0, Lx)
+        La10 = power(10.0, La)
+        
+        zc_case1 = zc
+        zc_case2 = zc*power( Lx10/La10, a )
+        zcrit = where(Lx >= La, zc_case1, zc_case2)
+        
+        ec_case1 = power( (1.+z), p1L )
+        ec_case2 = power( (1.+zcrit), p1)*power( (1.+z)/(1.+zcrit), p2L)
+        ec = where(z <= zcrit, ec_case1, ec_case2)
+        
+        Phi = self.Phi0(Lx, z, L0, g1, g2)
+        return Phi*ec
+            
+#   Barger et al. 2005, Yencho et al. 2009
+    def ILDE(self,Lx,z,L0,g1,g2,p1,p2):
+        eL = power((1.+ z),p1)
+        eD = power((1.+ z),p2)     
+        Phi = self.Phi0(Lx, z, L0, g1, g2, eL)       
+        return Phi*eD
+
+#   Aird et al. 2005
+    def LADE(self,Lx,z,L0,g1,g2,p1,p2,zc,d):
+        zzc = (1.+zc)/(1.+z)
+        #eL = (power(1+zc,p1)+power(1+zc,p2)) /(power(zzc,p1)+power(zzc,p2)) 
+        eL = 1.0/(power(zzc,p1)+power(zzc,p2)) 
+        K = power(10.,(d*(1.+z)) )
+        Phi = self.Phi0(Lx, z, L0, g1, g2, eL)       
+        return Phi*K
+#   Aird et al. 2005
+    def LADEc(self,Lx,z,L0,g1,g2,p1,p2,zc,d):
+        zzc = (1.+zc)/(1.+z)
+        eL = (power(1+zc,p1)+power(1+zc,p2)) /(power(zzc,p1)+power(zzc,p2)) 
+        #eL = 1.0/(power(zzc,p1)+power(zzc,p2)) 
+        K = power(10.,(d*(1.+z)) )
+        Phi = self.Phi0(Lx, z, L0, g1, g2, eL)       
+        return Phi*K    
+#    LDDE: Fotopoulou et al. 2012
+    def Fotopoulou(self,Lx,z,L0,g1,g2,p1,p2,zc,La,a):
+        Lx10 = power(10.0, Lx)
+        La10 = power(10.0, La)
+        L010 = power(10.0, L0)
+        
+        zc_case1 = zc
+        zc_case2 = zc*power( Lx10/La10, a )
+        zcrit = where(Lx >= La, zc_case1, zc_case2)
+
+        norm = power( (1.0 + zcrit), p1) + power( (1.0 + zcrit), p2)
+        ez = norm/(power( (1.+z)/(1.+zcrit), -p1) + power( (1.+z)/(1.+zcrit), -p2) )
+        
+        Phi = 1.0/(power( (Lx10/L010), g1 ) + power( (Lx10/L010), g2) )       
+        return Phi*ez
+    
